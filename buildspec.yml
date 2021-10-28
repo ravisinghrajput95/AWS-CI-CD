@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+
+  build:
+    commands:
+      - mvn package
+      - echo Build completed on `date`
+
+artifacts: 
+   files: 
+     - target/hello-app.war
+     - scripts/*
+     - appspec.yml

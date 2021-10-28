@@ -1,0 +1,36 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.efsavage</groupId>
+	<artifactId>hello-world-war</artifactId>
+	<version>2.1</version>
+	<packaging>war</packaging>
+	<name>Hello World Web Application Repository</name>
+	<description>Simplest possible Java Webapp</description>
+	<properties>
+ 		 <sonar.projectKey>cndacademy_hello-world-war</sonar.projectKey>
+ 		 <sonar.organization>cndacademy</sonar.organization>
+ 		 <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+ 		 <sonar.login>0829daee34fb2c86607d80c7cf0621f537bdc19c</sonar.login>
+	</properties>
+
+	<build>
+            <finalName>hello-app</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<version>8.1.5.v20120716</version>
+				<configuration>
+					<scanIntervalSeconds>0</scanIntervalSeconds>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.1.1</version>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
